@@ -5,6 +5,7 @@
       <BioCard></BioCard>
       <ContentBlock></ContentBlock>
     </div>
+    <NavButton style="position: absolute; right: 300px; bottom: 40px;">🡐 ABOUT ME</NavButton>
     <NavButton style="position: absolute; right: 40px; bottom: 40px;">PROJECTS 🡒</NavButton>
   </div>
 </template>
