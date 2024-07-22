@@ -1,4 +1,18 @@
 :root {
+    --spacing: 40px;
+
+    --header-height: 102px;
+
+    --bio-card-width: calc((100vw - 2*var(--spacing))/4);
+    --bio-card-height: calc(100vh - var(--header-height) - 2*var(--spacing));
+
+    --content-block-width: calc(100vw - var(--bio-card-width) - 3*var(--spacing));
+
+    --primary-border: solid 4px var(--primary);
+
+
+
+
     --dark: #141010;
     
     --primary: #F70776;
@@ -14,9 +28,21 @@
     --tertiary_third: #10325D;
 }
 
+div {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
 
 body {
     margin: 0;
     height: fill;
     background-color: var(--dark);
+}
+
+.content_align {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

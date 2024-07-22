@@ -1,12 +1,12 @@
 <template>
-    <div class="header_item">
+    <div class="contact_item">
         
     </div>
 </template>
 
 <script>
 export default {
-    name: 'HeaderItem',
+    name: 'ContactItem',
     props: {
         content: String
     }
@@ -17,3 +17,4 @@ export default {
 <style scoped>
 
 </style>
+  
