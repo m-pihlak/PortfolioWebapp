@@ -1,0 +1,22 @@
+:root {
+    --dark: #141010;
+    
+    --primary: #F70776;
+    --primary_second: #C3195D;
+    --primary_third: #680747;
+    
+    --secondary: #76F707;
+    --secondary_second: #55AA0A;
+    --secondary_third: #355D0D;
+    
+    --tertiary: #0776F7;
+    --tertiary_second: #0B54AA;
+    --tertiary_third: #10325D;
+}
+
+
+body {
+    margin: 0;
+    height: fill;
+    background-color: var(--dark);
+}
