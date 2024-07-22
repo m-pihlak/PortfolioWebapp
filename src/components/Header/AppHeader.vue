@@ -35,6 +35,5 @@ div {
   width: fill;
   height: var(--header-height);
   border-bottom: var(--primary-border);
-  position: relative;
 }
 </style>

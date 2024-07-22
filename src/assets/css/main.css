@@ -6,6 +6,9 @@
     --bio-card-width: calc((100vw - 2*var(--spacing))/4);
     --bio-card-height: calc(100vh - var(--header-height) - 2*var(--spacing));
 
+    --nav-button-width: calc((100vw - 2*var(--spacing))/8);
+    --nav-button-height: 56px;
+
     --content-block-width: calc(100vw - var(--bio-card-width) - 3*var(--spacing));
 
     --primary-border: solid 4px var(--primary);
@@ -16,16 +19,16 @@
     --dark: #141010;
     
     --primary: #F70776;
-    --primary_second: #C3195D;
-    --primary_third: #680747;
+    --primary-second: #C3195D;
+    --primary-third: #680747;
     
     --secondary: #76F707;
-    --secondary_second: #55AA0A;
-    --secondary_third: #355D0D;
+    --secondary-second: #55AA0A;
+    --secondary-third: #355D0D;
     
     --tertiary: #0776F7;
-    --tertiary_second: #0B54AA;
-    --tertiary_third: #10325D;
+    --tertiary-second: #0B54AA;
+    --tertiary-third: #10325D;
 }
 
 div {
