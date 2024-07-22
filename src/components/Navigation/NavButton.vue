@@ -94,8 +94,8 @@ svg {
     width: calc(var(--nav-button-width)*1.25);
     height: calc(var(--nav-button-height)*1.25);
     overflow: visible;
-    right: calc(var(--nav-button-width)*-0.125 + 40px);
-    bottom: calc(var(--nav-button-height)*-0.125 + 40px);
+    margin-left: calc(var(--nav-button-width)*-0.625);
+    margin-top: calc(var(--nav-button-height)*-0.125);
 }
 
 
