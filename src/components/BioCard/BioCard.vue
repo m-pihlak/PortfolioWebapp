@@ -39,5 +39,11 @@ div {
     border: var(--primary-border);
     border-radius: 4px;
 }
+
+@media screen and (max-width: 1200px) {
+    div {
+        height: calc(var(--bio-card-height) - var(--nav-button-height) - 40px);
+    }
+}
 </style>
   

@@ -1,17 +1,19 @@
 <template>
   <div id="app">
     <AppHeader></AppHeader>
-    <div class="content_align" style="margin: var(--spacing);">
+    <div class="content_align" style="margin: var(--spacing)">
       <BioCard></BioCard>
       <ContentBlock></ContentBlock>
     </div>
-    <NavButton style="position: absolute; right: 300px; bottom: 40px;">🡐 ABOUT ME</NavButton>
-    <NavButton style="position: absolute; right: 40px; bottom: 40px;">PROJECTS 🡒</NavButton>
+    <div class="nav_buttons">
+      <NavButton>🡐 ABOUT ME</NavButton>
+      <NavButton>PROJECTS 🡒</NavButton>
+    </div>
   </div>
 </template>
 
 <script>
-import '@/assets/css/main.css'
+import '@/assets/css/main.css';
 import AppHeader from './components/Header/AppHeader.vue';
 import BioCard from './components/BioCard/BioCard.vue';
 import ContentBlock from './components/ContentBlock/ContentBlock.vue';
@@ -35,6 +37,29 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+.nav_buttons {
+  display: flex;
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  
+  justify-content: right;
+}
+
+.nav_buttons > * {
+  margin-left: 40px;
+}
+
+@media screen and (max-width: 1200px) {
+  .nav_buttons {
+    justify-content: space-between;
+  }
+  .nav_buttons > * {
+    margin-left: 0;
+  }
 }
 
 </style>

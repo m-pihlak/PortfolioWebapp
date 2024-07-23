@@ -47,12 +47,6 @@ export default {
 }
 
 button {
-    font-family: "Orbitron", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 24px;
-    color:white;
-
     position: relative;
     cursor: pointer;
 
@@ -64,7 +58,19 @@ button {
     transition: ease-in 50ms;
 
     border-radius: 4px;
+
+    
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 24px;
+    color:white;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
 
 .svg_placeholder_top {
     mix-blend-mode: lighten;
@@ -112,7 +118,8 @@ path {
     animation: linear 0.2s erase both;
 }
 
-.nav_button:active button {
+.nav_button:active .svg_placeholder_top {
+    mix-blend-mode:exclusion;
     background-color: var(--secondary-third);
 }
 
