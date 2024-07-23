@@ -1,6 +1,6 @@
 <template>
     <div class="content_block">
-        <Transition name="slide" mode="out-in">
+        <Transition name="slide">
             <RouterView></RouterView>
         </Transition>
     </div>
@@ -37,11 +37,12 @@ main {
 .slide-enter-from,
 .slide-leave-to {
     opacity: 0;
+    transform: translateY(100%);
 }
 
 .slide-enter-active,
 .slide-leave-active {
-    transition: opacity 0.1s;
+    transition: 0.2s ease-out;
 }
 
 </style>
