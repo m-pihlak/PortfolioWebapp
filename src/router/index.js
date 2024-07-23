@@ -1,23 +1,28 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import AboutMe from '@/views/AboutMe.vue'
+import ResumeView from '@/views/ResumeView.vue'
+import ProjectsView from '@/views/ProjectsView.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
     {
         path: '/',
+        alias: '/aboutme',
         name: 'aboutme',
-        component: () => import('@/views/AboutMe.vue')
+        component: AboutMe
     },
     {
         path: '/resume',
         name: 'resume',
-        component: () => import('@/views/ResumeView.vue')
+        component: ResumeView
     },
     {
         path: '/projects',
         name: 'projects',
-        component: () => import('@/views/ProjectsView.vue')
+        component: ProjectsView
     }
 ]
 

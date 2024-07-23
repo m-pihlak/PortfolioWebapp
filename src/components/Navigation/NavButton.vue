@@ -5,7 +5,7 @@
                 <path d="M862 2.49994C452.685 -5.57525 353.831 27.4647 120.5 69.9999C529.021 25.5336 721.671 38.5872 1057.5 69.9999C599.174 73.544 358.117 94.0739 0.5 215C517.279 127.697 764.795 147.751 1187 215C706.441 210.199 463 184.5 73 322C461.912 264.089 564 236 977.5 294"/>
             </svg>
         </div>
-        <button @click="console.log('kaka')">
+        <button @click="this.changeRoute">
             {{ innerText }}
         </button>
         <div class="svg_placeholder_top">
@@ -20,14 +20,20 @@
 export default {
     name: 'NavButton',
     props: {
-        content: String,
-        
+        to: String,
+        extra: Function
     },
     data: () => ({
         innerText: null
     }),
     mounted() {
         this.innerText = this.$slots.default[0]?.text
+    },
+    methods: {
+        changeRoute() {
+            this.$router.push(this.to)
+            this.extra()
+        }
     }
 }
 </script>

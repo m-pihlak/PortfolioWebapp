@@ -1,29 +1,15 @@
 <template>
   <div class="app_header" style="background-color: var(--dark);">
-    <template v-for="(child, index) in children()">
-      <component :is="child" :key="index"></component>
-    </template>
+    <nav>
+      <router-link v-for="(route, index) in this.$router.options.routes" :to="route.name" :key="index">{{ route.name }}</router-link>
+    </nav>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import HeaderItem from './HeaderItem.vue'
-
 export default {
   name: 'AppHeader',
-  methods: {
-    children() {
-        let HeaderClass = Vue.extend(HeaderItem);
-        let newHeader = new HeaderClass({});
-
-        return [
-          newHeader
-        ];
-    },
-  },
   components: {
-    HeaderItem
   }
 }
 </script>
@@ -31,9 +17,42 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background-color: var(--dark);
   width: fill;
   height: var(--header-height);
   border-bottom: var(--primary-border);
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 800px;
+  width: fill;
+}
+
+nav > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: var(--nav-button-height);
+  width: var(--nav-button-width);
+  border-radius: 4px;
+
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 24px;
+  color:var(--secondary);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+.router-link-active {
+  background-color: var(--primary);
+  transition-duration: 0.1s;
 }
 </style>

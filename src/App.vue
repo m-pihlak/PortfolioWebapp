@@ -6,8 +6,8 @@
       <ContentBlock></ContentBlock>
     </div>
     <div class="nav_buttons">
-      <NavButton>🡐 ABOUT ME</NavButton>
-      <NavButton>PROJECTS 🡒</NavButton>
+      <NavButton :to="back" :extra="this.updateIndices">🡐 {{ back }}</NavButton>
+      <NavButton :to="forward" :extra="this.updateIndices">{{ forward }} 🡒</NavButton>
     </div>
   </div>
 </template>
@@ -26,6 +26,39 @@ export default {
     BioCard,
     ContentBlock,
     NavButton
+  },
+  data: () => ({
+    back: "",
+    forward: ""
+  }),
+  methods: {
+    updateIndices() {
+      const length = this.$router.options.routes.length
+      var thisIndex = 0
+
+      for(let i = 0; i < length; i++) {
+        if (this.$router.options.routes[i].name == this.$route.name) {
+          thisIndex = i
+          break
+        }
+      }
+
+      var backIndex = thisIndex - 1
+      var frontIndex = thisIndex + 1
+
+      if (backIndex < 0)
+        backIndex = length - 1
+      if (frontIndex > length - 1)
+        frontIndex = 0
+      
+      this.back = this.$router.options.routes[backIndex].name
+      this.forward = this.$router.options.routes[frontIndex].name
+      console.log(this.back)
+      console.log(this.forward)
+    }
+  },
+  mounted() {
+    this.updateIndices()
   }
 }
 </script>
@@ -35,8 +68,8 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  text-align: left;
+  color: white;
 }
 
 .nav_buttons {
