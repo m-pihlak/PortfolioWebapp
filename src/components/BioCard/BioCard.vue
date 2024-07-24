@@ -1,27 +1,18 @@
 <template>
     <div class="bio_card">
-
-        <template v-for="(child, index) in children()">
-            <component :is="child" :key="index"></component>
-        </template>
+        <contact-item v-for="(stuff, index) in contacts" :key="index"></contact-item>
     </div>
 </template>
   
 <script>
-import Vue from 'vue';
 import ContactItem from './ContactItem.vue'
 
 export default {
     name: 'BioCard',
+    data: () => ({
+        contacts: []
+    }),
     methods: {
-        children() {
-            let ContactClass = Vue.extend(ContactItem);
-            let newHeader = new ContactClass({});
-
-            return [
-            newHeader
-            ];
-        },
     },
     components: {
         ContactItem
