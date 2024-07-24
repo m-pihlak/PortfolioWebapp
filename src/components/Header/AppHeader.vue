@@ -1,7 +1,7 @@
 <template>
   <div class="app_header" style="background-color: var(--dark);">
     <nav>
-      <router-link v-for="(route, index) in this.$router.options.routes" :to="route.name" :key="index">{{ route.name }}</router-link>
+      <router-link v-for="(route, index) in this.$router.options.routes" :to="route.path" :key="index">{{ route.name }}</router-link>
     </nav>
   </div>
 </template>
@@ -49,6 +49,17 @@ nav > * {
   font-size: 24px;
   color:var(--secondary);
 }
+
+nav > *:hover {
+  transform: scale(1.1);
+  transition-duration: 0.2s;
+}
+
+nav > *:active {
+  transform: scale(0.9);
+  transition-duration: 0.2s;
+}
+
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 .router-link-active {
