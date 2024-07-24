@@ -1,6 +1,8 @@
 <template>
     <div class="content_circle">
-        <slot></slot>
+        <div class="image_container">
+            <slot></slot>
+        </div>
     </div>
 </template>
   
@@ -16,24 +18,32 @@ export default {
 .content_circle {
     background-color: var(--dark);
     width: var(--content-circle-diameter);
-    min-height: var(--content-circle-diameter);
+    height: var(--content-circle-diameter);
 
     border: var(--primary-border);
 
     border-radius: var(--content-circle-diameter);
 
     box-shadow: 0px 0px 8px 0px var(--primary) inset;
-    clip-path: circle(50%);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.content_circle > * {
-    width: 100%;
-    height: 100%;
-    min-width: 100%;
-    min-height: 100%;
+.image_container {
+    width: var(--inner-circle-diameter);
+    height: var(--inner-circle-diameter);
+    clip-path: circle(50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image_container > * {
+    min-width: var(--inner-circle-diameter);
+    min-height: var(--inner-circle-diameter);
+    object-fit: cover;
 }
 
 </style>
