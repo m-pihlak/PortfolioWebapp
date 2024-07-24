@@ -6,7 +6,7 @@
             </svg>
         </div>
         <button @click="this.changeRoute">
-            {{ innerText }}
+            {{ this.$slots.default[0]?.text.replace('PLACEHOLDER', this.to.name) }}
         </button>
         <div class="svg_placeholder_top">
             <svg width="1188" height="323" viewBox="0 0 1188 323" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -17,22 +17,15 @@
 </template>
 
 <script>
+import router from '@/router';
 export default {
     name: 'NavButton',
     props: {
-        to: String,
-        extra: Function
-    },
-    data: () => ({
-        innerText: null
-    }),
-    mounted() {
-        this.innerText = this.$slots.default[0]?.text
+        to: router.currentRoute.InstanceType
     },
     methods: {
         changeRoute() {
-            this.$router.push(this.to)
-            this.extra()
+            this.$router.push(this.to.path)
         }
     }
 }
