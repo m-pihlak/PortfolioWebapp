@@ -6,8 +6,8 @@
       <ContentBlock></ContentBlock>
     </div>
     <div class="nav_buttons">
-      <NavButton :to="back" :extra="this.updateIndices">🡐 {{ back }}</NavButton>
-      <NavButton :to="forward" :extra="this.updateIndices">{{ forward }} 🡒</NavButton>
+      <NavButton :to="this.getBack()">🡐 PLACEHOLDER</NavButton>
+      <NavButton :to="this.getForward()">PLACEHOLDER 🡒</NavButton>
     </div>
   </div>
 </template>
@@ -18,6 +18,7 @@ import AppHeader from './components/Header/AppHeader.vue';
 import BioCard from './components/BioCard/BioCard.vue';
 import ContentBlock from './components/ContentBlock/ContentBlock.vue';
 import NavButton from './components/Navigation/NavButton.vue';
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'App',
@@ -27,38 +28,11 @@ export default {
     ContentBlock,
     NavButton
   },
-  data: () => ({
-    back: "",
-    forward: ""
-  }),
   methods: {
-    updateIndices() {
-      const length = this.$router.options.routes.length
-      var thisIndex = 0
-
-      for(let i = 0; i < length; i++) {
-        if (this.$router.options.routes[i].name == this.$route.name) {
-          thisIndex = i
-          break
-        }
-      }
-
-      var backIndex = thisIndex - 1
-      var frontIndex = thisIndex + 1
-
-      if (backIndex < 0)
-        backIndex = length - 1
-      if (frontIndex > length - 1)
-        frontIndex = 0
-      
-      this.back = this.$router.options.routes[backIndex].name
-      this.forward = this.$router.options.routes[frontIndex].name
-      console.log(this.back)
-      console.log(this.forward)
-    }
-  },
-  mounted() {
-    this.updateIndices()
+    ...mapGetters([
+      'getBack',
+      'getForward'
+    ])
   }
 }
 </script>
