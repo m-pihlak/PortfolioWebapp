@@ -25,6 +25,7 @@ div {
   width: fill;
   height: var(--header-height);
   border-bottom: var(--primary-border);
+  box-shadow: 0px -4px 8px -4px var(--primary) inset;
 }
 nav {
   display: flex;
@@ -59,11 +60,9 @@ nav > *:active {
   transform: scale(0.9);
   transition-duration: 0.2s;
 }
-
-
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 .router-link-active {
   background-color: var(--primary);
   transition-duration: 0.1s;
 }
+
 </style>
