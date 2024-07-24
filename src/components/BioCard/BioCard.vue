@@ -1,7 +1,7 @@
 <template>
     <div class="bio_card">
         <ContentCircle>
-            <img src="@/assets/images/test.png"/>
+            <img src="@/assets/images/pilt2.png"/>
         </ContentCircle>
         <ContentBlock>
             <p style="font-size:18px; color:var(--primary); margin-top: 0;">
@@ -80,7 +80,7 @@ a:hover {
 
     overflow: hidden;
 
-    background-color: var(--dark);
+    background-color: color-mix(in srgb, var(--dark), transparent 20%);
     width: var(--bio-card-width);
     height: var(--bio-card-height);
     

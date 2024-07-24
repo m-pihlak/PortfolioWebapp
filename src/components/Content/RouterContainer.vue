@@ -28,7 +28,7 @@ export default {
 }
 
 .router_container {
-    background-color: var(--dark);
+    background-color: color-mix(in srgb, var(--dark), transparent 20%);;
     width: var(--router-container-width);
     height: var(--router-container-height);
     border-top: var(--primary-border);
