@@ -6,8 +6,22 @@
       <RouterContainer></RouterContainer>
     </div>
     <div class="nav_buttons">
-      <NavButton :to="this.getBack()">🡐 PLACEHOLDER</NavButton>
-      <NavButton :to="this.getForward()">PLACEHOLDER 🡒</NavButton>
+      <NavButton :to="this.getBack()">
+        <template #before>
+          ◄
+        </template>
+        <template #default>
+          PLACEHOLDER
+        </template>
+      </NavButton>
+      <NavButton :to="this.getForward()">
+        <template #default>
+          PLACEHOLDER
+        </template>
+        <template #after>
+          ►
+        </template>
+      </NavButton>
     </div>
   </div>
 </template>

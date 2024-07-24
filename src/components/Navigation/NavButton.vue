@@ -6,7 +6,14 @@
             </svg>
         </div>
         <button @click="this.changeRoute">
-            {{ this.$slots.default[0]?.text.replace('PLACEHOLDER', this.to.name) }}
+            <slot name="before"><div></div></slot>
+            <div class="text" v-if="$slots.default && $slots.before">
+                {{ this.to.name }}
+            </div>
+            <div class="text" v-else-if="$slots.default && $slots.after" dir="rtl">
+                {{ this.to.name }}
+            </div>
+            <slot name="after"><div></div></slot>
         </button>
         <div class="svg_placeholder_top">
             <svg width="1188" height="323" viewBox="0 0 1188 323" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -41,6 +48,13 @@ export default {
         grid-area: 1/1;
         width: 100%s;
     }
+    touch-action: manipulation;
+}
+
+button > * {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 button {
@@ -49,25 +63,23 @@ button {
 
     background-color: var(--primary);
     border: 0;
-    width: fill;
-    height: fill;
+    height: var(--nav-button-height);
+    width: var(--nav-button-width);
 
     transition: ease-in 50ms;
 
     border-radius: 4px;
 
-    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     font-family: "Orbitron", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 24px;
     color:white;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
-
 
 .svg_placeholder_top {
     mix-blend-mode: lighten;

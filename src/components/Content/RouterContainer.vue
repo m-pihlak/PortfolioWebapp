@@ -29,8 +29,8 @@ export default {
 
 .router_container {
     background-color: var(--dark);
-    width: var(--content-block-width);
-    height: var(--content-block-height);
+    width: var(--router-container-width);
+    height: var(--router-container-height);
     border-top: var(--primary-border);
     border-left: var(--primary-border);
 
@@ -61,8 +61,8 @@ main {
 
     /* Track */
     ::-webkit-scrollbar-track {
-    background: var(--primary-second);
-    border-radius: 4px;
+        background: var(--primary-second);
+        border-radius: 4px;
     }
 
     /* Handle */
@@ -76,7 +76,7 @@ main {
         background: var(--secondary-third);
     }
     .router_container > div {
-        height: calc(var(--content-block-height) - 2*var(--spacing) - var(--nav-button-height));
+        height: calc(var(--router-container-height) - 2*var(--spacing) - var(--nav-button-height));
         overflow-y: scroll;
     }
 }
