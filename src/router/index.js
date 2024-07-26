@@ -3,7 +3,6 @@ import VueRouter from 'vue-router'
 
 import AboutMe from '@/views/AboutMe.vue'
 import ResumeView from '@/views/ResumeView.vue'
-import SkillsView from '@/views/SkillsView.vue'
 import ProjectsView from '@/views/ProjectsView.vue'
 
 Vue.use(VueRouter)
@@ -19,11 +18,6 @@ const routes = [
         path: '/resume',
         name: 'resume',
         component: ResumeView
-    },
-    {
-        path: '/skills',
-        name: 'skills',
-        component: SkillsView
     },
     {
         path: '/projects',
