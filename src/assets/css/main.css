@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+/*Press Start 2P*/      @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bungee&family=Kosugi+Maru&family=M+PLUS+Rounded+1c&family=Mitr:wght@200;300;400;500;600;700&family=Monoton&family=Orbitron:wght@400..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Press+Start+2P&family=Quattrocento:wght@400;700&family=Rowdies:wght@300;400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Varela+Round&family=Viga&display=swap');
+/*Josefin Sans*/        @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bungee&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kosugi+Maru&family=Mitr:wght@200;300;400;500;600;700&family=Monoton&family=Orbitron:wght@400..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Press+Start+2P&family=Quattrocento:wght@400;700&family=Rowdies:wght@300;400&family=Sarpanch:wght@400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@200..900&family=Viga&display=swap');
 
 :root {
     --spacing: 40px;
@@ -36,21 +37,12 @@
     --tertiary-third: #10325D;
 }
 
-@media screen and (max-height:700px){
-    :root {
-        --header-height: 80px;
-        --router-container-content-margin: calc(var(--spacing)*3/4);
-    }
-}
-
-@media screen and (max-height:500px){
-    :root {
-        --header-height: 60px;
-        --router-container-content-margin: calc(var(--spacing)/2);
-    }
-}
-
 h1 {
+    font-family: "Press Start 2P", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: normal;
+    font-size:24px;
     color: var(--primary);
 }
 
@@ -91,5 +83,19 @@ body {
         --router-container-height: auto;
 
         --content-circle-diameter: calc(var(--bio-card-width) - var(--spacing)*5);
+    }
+}
+
+@media screen and (max-height:700px){
+    :root {
+        --header-height: 80px;
+        --router-container-content-margin: calc(var(--spacing)*3/4);
+    }
+}
+
+@media screen and (max-height:500px){
+    :root {
+        --header-height: 60px;
+        --router-container-content-margin: calc(var(--spacing)/2);
     }
 }

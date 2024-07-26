@@ -45,10 +45,10 @@ nav > * {
   width: var(--nav-button-width);
   border-radius: 4px;
 
-  font-family: "Orbitron", sans-serif;
+  font-family: "Press Start 2P", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-size: 24px;
+  font-size: 18px;
   color:var(--secondary);
 }
 

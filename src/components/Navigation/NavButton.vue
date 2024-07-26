@@ -74,10 +74,10 @@ button {
     align-items: center;
     justify-content: space-between;
 
-    font-family: "Orbitron", sans-serif;
+    font-family: "Press Start 2P", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-size: 24px;
+    font-size: 16px;
     color:white;
 }
 

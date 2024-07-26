@@ -4,7 +4,7 @@
             <img src="@/assets/images/pilt2.png"/>
         </ContentCircle>
         <ContentBlock>
-            <p style="font-size:18px; color:var(--primary); margin-top: 0;">
+            <p style="font-family: 'Press Start 2P';font-size:14px; color:var(--primary); margin-top: 0;">
                 Merili Pihlak
             </p>
             <div class="contacts" v-for="(item, index) in contacts" :key="index" style="display:flex; flex-direction: row;align-items: center;">
@@ -71,10 +71,11 @@ a:hover {
 }
 
 .bio_card {
-    font-family: "Orbitron", sans-serif;
+    font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-size: 12px;
+    font-weight: normal;
+    font-size: 14px;
     color:white;
     white-space: nowrap;
 
