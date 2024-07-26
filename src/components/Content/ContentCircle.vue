@@ -20,11 +20,12 @@ export default {
     width: var(--content-circle-diameter);
     height: var(--content-circle-diameter);
 
-    border: var(--primary-border);
+    /*border: var(--primary-border);*/
 
     border-radius: var(--content-circle-diameter);
 
-    box-shadow: 0px 0px 8px 0px var(--primary) inset;
+    /*box-shadow: 0px 0px 8px 0px var(--primary) inset;*/
+    box-shadow: 4px 4px 16px 4px black;
     display: flex;
     align-items: center;
     justify-content: center;

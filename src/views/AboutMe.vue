@@ -26,7 +26,5 @@ export default {
 </script>
 
 <style>
-#aboutme > * {
-    margin-bottom: var(--spacing);
-}
+
 </style>

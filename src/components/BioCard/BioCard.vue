@@ -84,10 +84,11 @@ a:hover {
     width: var(--bio-card-width);
     height: var(--bio-card-height);
     
-    border: var(--primary-border);
+    /*border: var(--primary-border);*/
     border-radius: 4px;
 
-    box-shadow: 0px 0px 8px 0px var(--primary) inset;
+    /*box-shadow: 0px 0px 8px 0px var(--primary) inset; */
+    box-shadow: 4px 4px 16px 4px black;
 
     display: flex;
     flex-direction: column;

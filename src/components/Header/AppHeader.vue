@@ -24,8 +24,9 @@ div {
   background-color: var(--dark);
   width: fill;
   height: var(--header-height);
-  border-bottom: var(--primary-border);
-  box-shadow: 0px -4px 8px -4px var(--primary) inset;
+  /*border-bottom: var(--primary-border);
+  box-shadow: 0px -4px 8px -4px var(--primary) inset;*/
+  box-shadow: 4px 4px 16px 4px black;
 }
 nav {
   display: flex;

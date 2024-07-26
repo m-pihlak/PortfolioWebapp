@@ -13,6 +13,7 @@
 
     --router-container-height: var(--bio-card-height);
     --router-container-width: calc(100vw - var(--bio-card-width) - 3*var(--spacing));
+    --router-container-content-margin: var(--spacing);
 
     --primary-border: solid 4px var(--primary);
 
@@ -20,7 +21,7 @@
     --inner-circle-diameter: calc(var(--content-circle-diameter) - 8px);
 
 
-    --dark: #141010;
+    --dark: #141010;/*#141010;*/
     
     --primary: #F70776;
     --primary-second: #C3195D;
@@ -35,10 +36,22 @@
     --tertiary-third: #10325D;
 }
 
-div {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+@media screen and (max-height:700px){
+    :root {
+        --header-height: 80px;
+        --router-container-content-margin: calc(var(--spacing)*3/4);
+    }
+}
+
+@media screen and (max-height:500px){
+    :root {
+        --header-height: 60px;
+        --router-container-content-margin: calc(var(--spacing)/2);
+    }
+}
+
+h1 {
+    color: var(--primary);
 }
 
 body {

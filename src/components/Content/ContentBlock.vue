@@ -17,12 +17,14 @@ export default {
     padding: calc(var(--spacing));
     background-color: var(--dark);
     width: fill;
-    border-top: var(--primary-border);
-    border-left: var(--primary-border);
+    min-width: fit-content;
+    /*border-top: var(--primary-border);
+    border-left: var(--primary-border);*/
 
     border-radius: 4px;
 
-    box-shadow: 4px 4px 8px -4px var(--primary) inset;
+    /*box-shadow: 4px 4px 8px -4px var(--primary) inset;*/
+    box-shadow: 4px 4px 16px 4px black;
 }
 
 

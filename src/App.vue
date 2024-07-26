@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <background-item></background-item>
     <AppHeader></AppHeader>
     <div class="content_align">
       <BioCard></BioCard>
@@ -33,6 +34,7 @@ import BioCard from './components/BioCard/BioCard.vue';
 import RouterContainer from './components/Content/RouterContainer.vue';
 import NavButton from './components/Navigation/NavButton.vue';
 import { mapGetters } from 'vuex';
+import BackgroundItem from './components/background/BackgroundItem.vue';
 
 export default {
   name: 'App',
@@ -40,7 +42,8 @@ export default {
     AppHeader,
     BioCard,
     RouterContainer,
-    NavButton
+    NavButton,
+    BackgroundItem
   },
   methods: {
     ...mapGetters([
@@ -65,7 +68,7 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: var(--spacing);
+    padding: var(--spacing);
 }
 
 .nav_buttons {
