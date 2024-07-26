@@ -1,7 +1,7 @@
 <template>
     <div class="bio_card">
         <ContentCircle>
-            <img src="@/assets/images/pilt2.png"/>
+            <img src="@/assets/images/pfp/pilt2.png"/>
         </ContentCircle>
         <ContentBlock>
             <p style="font-family: 'Press Start 2P';font-size:14px; color:var(--primary); margin-top: 0;">
