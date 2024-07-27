@@ -38,7 +38,7 @@ export default {
             circ = 2 * Math.PI;
             nodes = [];
 
-            canvas = document.querySelector('canvas');
+            canvas = document.getElementById('background_canvas');
             resizeWindow();
             mouse = {
                 x: canvas.width / 2,
