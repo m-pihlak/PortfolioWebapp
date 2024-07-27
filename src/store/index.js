@@ -39,6 +39,28 @@ const routeModule = {
 }
 
 
+const gameModule = {
+  state: {
+    highScore: 0
+  },
+  getters: {
+    getHighScore(state) {
+      return state.highScore;
+    }
+  },
+  mutations: {
+    updateHighScore(state, payload) {
+      state.highScore = state.highScore < payload.score ? payload.score : state.highScore
+    }
+  },
+  actions: {
+    updateHighScore ({ commit }, payload) {
+      commit('updateHighScore', payload)
+    }
+  }
+}
+
+
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -51,6 +73,7 @@ export default new Vuex.Store({
   actions: {
   },
   modules: {
-    routeModule: routeModule
+    routeModule: routeModule,
+    gameModule: gameModule
   }
 })
