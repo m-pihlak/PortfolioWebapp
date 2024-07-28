@@ -16,8 +16,6 @@ export default {
 .content_block {
     padding: calc(var(--spacing));
     background-color: var(--dark);
-    width: fill;
-    min-width: fit-content;
     /*border-top: var(--primary-border);
     border-left: var(--primary-border);*/
 

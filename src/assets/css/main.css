@@ -37,6 +37,12 @@
     --tertiary-third: #10325D;
 }
 
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
 h1 {
     font-family: "Press Start 2P", sans-serif;
     font-optical-sizing: auto;
