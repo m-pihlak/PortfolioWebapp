@@ -85,7 +85,7 @@ export default {
 
     @media screen and (max-width: 1000px) {
         .wrapper {
-            display: flex;
+            display: flex !important; 
             flex-direction: column;
         }
     }
