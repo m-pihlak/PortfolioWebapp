@@ -21,9 +21,7 @@ export default {
 
 .wrapper-about-me {
     .wrapper {
-        display: grid;
         grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-        grid-gap: var(--spacing);
     }
 
     .item-0,
@@ -55,6 +53,19 @@ export default {
         width: 100%;
         border-radius: 4px;
     }
+    /*
+    @media screen and (max-width: 1535px) {
+        .item-1 {
+            grid-row: 2;
+            grid-column: 1/3;
+        }
+
+        .item-2 {
+            grid-row: 1;
+            grid-column: 2;
+        }
+    }
+    */
 
     @media screen and (max-width: 1380px) {
         .wrapper {
@@ -69,9 +80,6 @@ export default {
         .item-2 {
             grid-row: 1;
             grid-column: 2;
-            
-            text-align: center;
-            width: 100%;
         }
     }
 

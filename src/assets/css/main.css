@@ -50,6 +50,7 @@ h1 {
     font-weight: normal;
     font-size:24px;
     color: var(--primary);
+    line-height: 32px;
 }
 
 h2 {
@@ -59,6 +60,11 @@ h2 {
     font-weight: normal;
     font-size:16px;
     color: var(--secondary);
+    line-height: 24px;
+}
+
+p {
+    text-align: justify;
 }
 
 body {
