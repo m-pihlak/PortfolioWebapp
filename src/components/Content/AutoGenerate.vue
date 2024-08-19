@@ -6,6 +6,7 @@
             <ContentBlock v-for="(block, index2) in section.blocks" :key="index2" :class="'item-' + index2">
                 <h2 v-if="block.title">{{ block.title }}</h2>
                 <p v-for="(p, index3) in block.paragraphs" :key="index3">{{ p }}</p>
+                <a v-if="block.link" :href="block.link.link">{{ block.link.alias }}</a>
                 <img v-if="block.img" :src="block.img"/>
                 <p v-if="block.desc" style="text-align: center;">{{ block.desc }}</p>
             </ContentBlock>
