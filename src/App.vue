@@ -76,7 +76,7 @@ export default {
 .nav_buttons {
     display: flex;
     position: fixed;
-    left: var(--spacing);
+    left: calc(var(--spacing) + var(--bio-card-width));
     right: var(--spacing);
     bottom: var(--spacing);
     
@@ -89,6 +89,7 @@ export default {
 
 @media screen and (max-width: 1200px) {
     .nav_buttons {
+        left: var(--spacing);
         justify-content: space-between;
     }
     .nav_buttons > * {
