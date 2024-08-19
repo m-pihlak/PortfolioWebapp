@@ -72,8 +72,12 @@ a {
     color: var(--secondary);
 }
 
-a :visited {
+a :hover {
     color: var(--secondary-second);
+}
+
+a :visited {
+    color: var(--secondary-third);
 }
 
 body {
