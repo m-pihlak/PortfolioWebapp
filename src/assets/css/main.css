@@ -68,6 +68,14 @@ p {
     text-align: justify;
 }
 
+a {
+    color: var(--secondary);
+}
+
+a :visited {
+    color: var(--secondary-second);
+}
+
 body {
     margin: 0;
     height: fill;
